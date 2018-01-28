@@ -6,7 +6,7 @@ describe("Game", function(){
     expect(game).toEqual(jasmine.any(Game))
   })
 
-  it("", function() {
-
+  it("returns player 1", function() {
+    expect(game.player1().toEqual("John"))
   })
 })
