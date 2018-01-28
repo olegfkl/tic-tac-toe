@@ -13,4 +13,8 @@ describe("Game", function(){
   it("returns player 1", function() {
     expect(game.playerOne()).toEqual("John")
   })
+
+  it("returns player 2", function() {
+    expect(game.playerTwo()).toEqual("Ben")
+  })
 })
