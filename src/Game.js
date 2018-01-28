@@ -1,7 +1,11 @@
 
 
-function Game(player1, player2) {
-  this._player1 = player1
-  this._player2 = player2
-  this._turn = player1
+function Game(playerOne, playerTwo) {
+  this._playerOne = playerOne
+  this._player2 = playerTwo
+  this._turn = playerOne
 }
+
+Game.prototype.playerOne = function () {
+  return this._playerOne  
+};
