@@ -1,7 +1,7 @@
 
-function Game() {
-  this._playerOne = 'X'
-  this._playerTwo = 'O'
+function Game(playerOne = Player, playerTwo = Player) {
+  this._playerOne = new playerOne('X')
+  this._playerTwo = new playerTwo('O')
   this._turn      =  null
   this._rules     = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8],
@@ -28,10 +28,10 @@ Game.prototype.currentPlayer = function () {
 };
 
 Game.prototype.switchTurn = function () {
-  if(this.currentPlayer() === this.playerTwo()) {
+  if(this.currentPlayer().name() === this.playerTwo().name()) {
     this.setTurn(this.playerOne())
   } else {
-    this.setTurn(this._playerTwo)
+    this.setTurn(this.playerTwo())
   };
 
   return this.currentPlayer();
